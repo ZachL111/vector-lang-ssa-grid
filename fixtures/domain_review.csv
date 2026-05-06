@@ -1,0 +1,6 @@
+name,focus,signal,slack,drag,confidence,score,lane
+baseline,IR pressure,49,26,12,78,166,ship
+stress,lowering drift,69,46,24,90,202,ship
+edge,stack depth,80,45,19,56,204,ship
+recovery,diagnostic reach,68,21,14,47,162,ship
+stale,IR pressure,54,52,14,58,176,ship

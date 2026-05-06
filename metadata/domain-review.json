@@ -1,0 +1,73 @@
+{
+  "repo": "vector-lang-ssa-grid",
+  "language": "Julia",
+  "category": "Compilers",
+  "goal": "Create a Julia reference implementation for ssa workflows, centered on event replay, fixture event logs, and golden state snapshots.",
+  "review_model": {
+    "terms": [
+      "IR pressure",
+      "lowering drift",
+      "stack depth",
+      "diagnostic reach"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "IR pressure",
+      "signal": 49,
+      "slack": 26,
+      "drag": 12,
+      "confidence": 78,
+      "score": 166,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "lowering drift",
+      "signal": 69,
+      "slack": 46,
+      "drag": 24,
+      "confidence": 90,
+      "score": 202,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "stack depth",
+      "signal": 80,
+      "slack": 45,
+      "drag": 19,
+      "confidence": 56,
+      "score": 204,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "diagnostic reach",
+      "signal": 68,
+      "slack": 21,
+      "drag": 14,
+      "confidence": 47,
+      "score": 162,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "IR pressure",
+      "signal": 54,
+      "slack": 52,
+      "drag": 14,
+      "confidence": 58,
+      "score": 176,
+      "lane": "ship"
+    }
+  ]
+}
